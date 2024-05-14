@@ -1,4 +1,4 @@
-import { ButtonText, BigHeading, Paragraph, SubmitButton, XStack, YStack, H3 } from '@my/ui'
+import { ButtonText, BigHeading, Paragraph, SubmitButton, XStack, YStack, H3, Anchor } from '@my/ui'
 import { SchemaForm, formFields } from 'app/utils/SchemaForm'
 import { FormProvider, useForm } from 'react-hook-form'
 import { api } from 'app/utils/api'
@@ -89,6 +89,9 @@ export const SignInForm = () => {
               $sm={{ jc: 'center', height: '100%' }}
               ai={'flex-start'}
             >
+              <Anchor href="/auth/recover" dsp="flex" jc="flex-start">
+                Recover account
+              </Anchor>
               <SubmitButton
                 onPress={() => submit()}
                 br="$3"
